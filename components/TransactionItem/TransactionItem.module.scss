@@ -1,0 +1,94 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal {
+    color: #444;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    padding: 20px;
+    padding-bottom: 70px;
+    width: 90%;
+    height: 270px;
+    max-width: 600%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.closeButton {
+    background-color: transparent;
+    color: #555;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.closeButton:hover{
+    background-color: rgba(255, 69, 58, 0.2);
+    color: #ff453a;
+    transform: scale(1.1);
+}
+
+.imageSlider {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+
+    button {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .images {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.6);
+        border: 1px solid #e0e0e0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .images:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+
+    &.bought {
+        background-color: #4caf50;
+    }
+
+    &.swapped {
+        background-color: #ff9800;
+    }
+}

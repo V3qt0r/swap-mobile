@@ -1,0 +1,232 @@
+// @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap");
+// @import "./variables.scss";
+
+// * {
+//   padding: 0;
+//   margin: 0;
+//   transition: all 0.15s ease;
+// }
+
+// html {
+//   font-size: 16px;
+// }
+
+// body {
+//   background: var(--white);
+//   font-family: "Rubik", sans-serif;
+// }
+
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6,
+// p {
+//   margin: 0;
+// }
+
+// h1,
+// h2,
+// h3 {
+//   font-family: "Cabinet Grotesk", sans-serif;
+//   font-weight: 700;
+//   color: var(--black);
+// }
+
+// button,
+// a {
+//   border: none;
+//   background: none;
+//   cursor: pointer;
+//   text-decoration: none;
+// }
+
+// button {
+//   @extend .flex-ac-jc;
+//   width: 100%;
+//   font-size: 18px;
+//   height: 53px;
+//   font-weight: 500;
+//   padding: 1rem 0;
+//   border-radius: 16px;
+//   font-family: inherit;
+// }
+
+// input {
+//   font-family: inherit;
+// }
+
+// button,
+// a,
+// p,
+// h4 {
+// }
+
+// h2 {
+//   font-size: 2.75rem;
+//   line-height: 46.2px;
+
+//   // @media (max-width: 410px) {
+//   //   font-size: 2.45rem;
+//   // }
+
+//   @media (max-width: 360px) {
+//     font-size: 2.25rem;
+//   }
+// }
+
+// h4 {
+//   color: var(--blue-d3);
+//   font-weight: 500;
+//   font-size: 1rem;
+// }
+
+// h5 {
+//   font-weight: 500;
+// }
+
+// p {
+//   color: var(--grey-d2);
+//   font-size: Max(20px, 1.125rem);
+//   font-weight: 500;
+//   line-height: 24px;
+// }
+
+// ul {
+//   list-style-type: none;
+// }
+
+// // .swiper-wrapper {
+// //   .swiper-slide {
+// //     &:first-child {
+// //       margin-left: 2rem;
+// //     }
+// //     &:last-child {
+// //       margin-right: 2rem;
+// //     }
+// //   }
+// // }
+
+// /* The switch - the box around the slider */
+// .switch {
+//   position: relative;
+//   display: inline-block;
+//   width: 38px;
+//   height: 24px;
+// }
+
+// /* Hide default HTML checkbox */
+// .switch input {
+//   opacity: 0;
+//   width: 0;
+//   height: 0;
+// }
+
+// /* The slider */
+// .slider {
+//   position: absolute;
+//   cursor: pointer;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   background-color: #d9d9d9;
+//   -webkit-transition: 0.4s;
+//   transition: 0.4s;
+// }
+
+// .slider:before {
+//   position: absolute;
+//   content: "";
+//   height: 20px;
+//   width: 20px;
+//   left: 0;
+//   bottom: 2px;
+//   background-color: #999999;
+//   -webkit-transition: 0.4s;
+//   transition: 0.4s;
+// }
+
+// input:checked + .slider {
+//   background-color: #cceaea;
+//   &::before {
+//     background-color: #54bab9;
+//   }
+// }
+
+// input:focus + .slider {
+//   box-shadow: 0 0 1px #d9d9d9;
+// }
+
+// input:checked + .slider:before {
+//   -webkit-transform: translateX(16px);
+//   -ms-transform: translateX(16px);
+//   transform: translateX(16px);
+// }
+
+// /* Rounded sliders */
+// .slider.round {
+//   border-radius: 34px;
+// }
+
+// .slider.round:before {
+//   border-radius: 50%;
+// }
+
+// .pulse {
+//   width: 22.4px;
+//   height: 22.4px;
+//   border-radius: 50%;
+//   background: #764af1;
+//   box-shadow: 0 0 0 0 rgba(118, 74, 241, 0.5);
+//   animation: pulse-c6zlskmd 1s infinite;
+// }
+
+// @keyframes pulse-c6zlskmd {
+//   100% {
+//     box-shadow: 0 0 0 33.6px #0000;
+//   }
+// }
+// .loader {
+//   @extend .flex-ac-jc;
+//   min-height: 100vh;
+// }
+
+// .react-code-input {
+//   display: flex !important;
+//   justify-content: space-evenly;
+//   width: 95%;
+//   input {
+//     text-align: center;
+//   }
+// }
+
+// .dots {
+//   width: 56px;
+//   height: 26.9px;
+//   background: radial-gradient(circle closest-side, #764af1 90%, #0000) 0% 50%,
+//     radial-gradient(circle closest-side, #764af1 90%, #0000) 50% 50%,
+//     radial-gradient(circle closest-side, #764af1 90%, #0000) 100% 50%;
+//   background-size: calc(100% / 3) 13.4px;
+//   background-repeat: no-repeat;
+//   animation: dots-7ar3yq 1s infinite linear;
+// }
+
+// @keyframes dots-7ar3yq {
+//   20% {
+//     background-position: 0% 0%, 50% 50%, 100% 50%;
+//   }
+
+//   40% {
+//     background-position: 0% 100%, 50% 0%, 100% 50%;
+//   }
+
+//   60% {
+//     background-position: 0% 50%, 50% 100%, 100% 0%;
+//   }
+
+//   80% {
+//     background-position: 0% 50%, 50% 50%, 100% 100%;
+//   }
+// }

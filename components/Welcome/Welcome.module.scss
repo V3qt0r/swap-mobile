@@ -1,0 +1,119 @@
+.background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #ffffff 50%, #ffd700 50%);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Arial", sans-serif;
+}
+
+
+
+.welcomeContainer {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.heading {
+  font-size: 2.5rem;
+  color: #ffd700;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.description {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+  margin: 10px 0 30px;
+  line-height: 1.6;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+
+  animation: fadeInn 0.5s ease-in-out;
+
+  @media (max-width: 768px){
+    font-size: 1rem;
+    margin: 10px 0 20px;
+  }
+}
+
+@keyframes fadeInn {
+  from {
+    opacity: 0;
+    transform: translate(10px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+
+  &:hover {
+    transform: translate(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: translate(1px);
+  }
+}
+
+
+.login {
+  background-color: #ffd700;
+  color: #333;
+
+  &:hover {
+    background-color: #e6b800;
+  }
+}
+
+
+.register {
+  background-color: #333;
+  color: #fff;
+
+  &:hover{
+    background-color: #555;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,87 @@
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #ffffff 50%, #ffd700 50%);
+    background-size: cover;
+    padding: 20px;
+}
+
+
+.loginForm {
+    width: 150%;
+    min-height: 45vh;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 20px 30px;
+    padding-right: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+
+    h2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        color: #444;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+.inputField {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+
+    &:focus {
+        outline: none;
+        border-color: #ffd966;
+        box-shadow: 0 0 5px rgba(255, 217, 102, 0.5);
+
+    }
+}
+
+
+.submitButton {
+    width: 100%;
+    padding: 12px;
+    margin-top: 25px;
+    margin-left: 15px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background: #e6b800;
+    }
+}
+
+
+.label {
+    width: 150%;
+    max-width: 600px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #666;
+}

@@ -1,0 +1,50 @@
+// .flex-ac {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .flex-ac-jb {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+// }
+
+// .flex-ac-jc {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .grid-content {
+//   display: grid;
+//   place-content: center;
+// }
+
+// .grid-items {
+//   display: grid;
+//   place-items: center;
+// }
+
+// .textarea {
+//   outline: none;
+//   border: none;
+//   margin-top: 1.5rem;
+//   height: 158px;
+//   padding: 1.25rem;
+//   border: 1px solid var(--grey-l4);
+//   border-radius: 12px;
+//   background: var(--grey-l4);
+//   font-size: max(16px, 1rem);
+//   font-family: "Rubik", sans-serif;
+//   font-weight: 500;
+//   color: var(--grey-d3);
+//   transition: all 0.3s linear;
+//   &::placeholder {
+//     color: var(--grey-d1);
+//   }
+//   &:focus,
+//   &:focus-visible,
+//   &:focus-within {
+//     border: 1px solid #9f80f5;
+//   }
+// }
