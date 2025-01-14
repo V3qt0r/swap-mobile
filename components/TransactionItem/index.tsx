@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./TransactionItem.module.scss";
 
 interface TransactionItemProps {
-    transaction: {
+       transaction: {
         name: string;
         email: string;
         phoneNumber: string;
@@ -12,6 +12,7 @@ interface TransactionItemProps {
         swapped: boolean;
         ItemId: number;
     };
+
     onClose: () => void; 
 }
 
@@ -75,7 +76,7 @@ const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, onClose 
     const handlePreviousImage = () => {
         setCurrentImageIndex((prevIndex) => 
        (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-    };
+    }
 
     return (
         <div className={styles.overlay}>
@@ -83,34 +84,44 @@ const TransactionItem: React.FC<TransactionItemProps> = ({ transaction, onClose 
                 <button className={styles.closeButton} onClick={onClose}>
                     &times;
                 </button>
-                <h2>Transaction Details</h2>
-                <p><strong>Owner Name:</strong> {transaction.name}</p>
-                <p><strong>Owner Email:</strong> {transaction.email}</p>
-                <p><strong>Owner Phone Number:</strong> {transaction.phoneNumber}</p>
-                <p><strong>Item Name:</strong> {transaction.itemName}</p>
-                <p><strong>Amount Paid:</strong> {transaction.AmountPaid}</p>
-                <p>
-                    <strong>Status:</strong>{" "}
-                    Status: {transaction.bought ? <span className={`${styles.badge} ${styles.bought}`}>Bought</span> : transaction.swapped ? 
-                            <span className={`${styles.badge} ${styles.swapped}`}>Swapped</span> : <span className={`${styles.badge} `}>Unknown</span>}
-                </p>
-            </div>
-            {images.length > 0 ? (
-                    <div  className={styles.imageSlider}>
-                        <button onClick={handlePreviousImage}>&lt;</button>
-                        <img 
-                            src={images[currentImageIndex]}
-                            alt={`Item ${transaction.itemName}`}
-                            className={styles.images}
-                        />
-                        <button onClick={handleNextImage}>&gt;</button>
+                <div className={styles.content}>
+                    {images.length > 0 ? (
+                        <div className={styles.imageContainer}>
+                            <img
+                                src={images[currentImageIndex]}
+                                alt={`Item ${transaction.itemName}`}
+                                className={styles.image}
+                            />
+                            <div className={styles.imageControls}>
+                                <button onClick={handlePreviousImage}>&lt;</button>
+                                <button onClick={handleNextImage}>&gt;</button>
+                            </div>
+                        </div>
+                    ) : (
+                        <p>No image available for this item.</p>
+                    )}
+                    <div className={styles.details}>
+                        <h2>Transaction Details</h2>
+                        <p><strong>Owner Name:</strong> {transaction.name}</p>
+                        <p><strong>Owner Email:</strong> {transaction.email}</p>
+                        <p><strong>Owner Phone Number:</strong> {transaction.phoneNumber}</p>
+                        <p><strong>Item Name:</strong> {transaction.itemName}</p>
+                        <p><strong>Amount Paid:</strong> ${transaction.AmountPaid}</p>
+                        <p>
+                            <strong>Status:</strong>{" "}
+                            {transaction.bought ? (
+                                <span className={`${styles.badge} ${styles.bought}`}>Bought</span>
+                            ) : transaction.swapped ? (
+                                <span className={`${styles.badge} ${styles.swapped}`}>Swapped</span>
+                            ) : (
+                                <span className={`${styles.badge}`}>Unknown</span>
+                            )}
+                        </p>
                     </div>
-                ) : (
-                    <p>No image available for this item.</p>
-                )}
+                </div>
+            </div>
         </div>
     );
-    
 };
 
 export default TransactionItem;

@@ -24,22 +24,6 @@
         }
 }
 
-// .addItem {
-//     position: relative;
-//     text-align: center;
-
-//     .addButton {
-//         background-color: #007bff;
-//         color: white;
-//         padding: 10px 20px;
-//         border: none;
-//         border-radius: 5px;
-//         cursor: pointer;
-
-//         &:hover {
-//             background-color: #0056b3;
-//         }
-//     }
 
     .popup {
         // position: fixed;
@@ -143,3 +127,31 @@
     margin-top: 20px;
 }
 
+
+.imagePreviewContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 10px auto;
+    overflow: hidden;
+  }
+  
+  .imagePreview {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .imagePlaceholder {
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  

@@ -14,7 +14,7 @@ interface Item {
     id: number;
     name: string;
     Description: string;
-    Prize: Float64Array;
+    prize: Float64Array;
 }
 
 
@@ -170,7 +170,7 @@ const Dashboard: React.FC = () => {
                                     {/* )} */}
                                     <h3>{item.name}</h3>
                                     <p>{item.Description}</p>
-                                    <p>Prize: ${item.Prize}</p>
+                                    <p>Prize: ${item.prize}</p>
 
                                     <ItemButtons
                                         itemId={item.id}
@@ -191,7 +191,7 @@ const Dashboard: React.FC = () => {
                         itemId={selectedItem.id}
                         itemName={selectedItem.name}
                         itemDescription={selectedItem.Description}
-                        itemPrize= {selectedItem.Prize}
+                        itemPrize= {selectedItem.prize}
                         onPay={handlePay}
                     /> 
                 )}

@@ -39,6 +39,7 @@ const BuyPage: React.FC<BuyPageProps> = ({
 
     return (
         <div className={styles.overlay}>
+            
             <div className={styles.modal}>
                 <button className={styles.closeButton} onClick={onClose}>
                     ✖
