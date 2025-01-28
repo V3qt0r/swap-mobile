@@ -1,0 +1,87 @@
+
+
+.popup {
+    z-index: 1001;
+    position: relative; /* Fixed position to stay relative to the viewport */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -30%); /* Adjust position to center exactly */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%; /* Responsive width */
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.3s ease; /* Smooth entrance animation */
+}
+
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+
+  .closeButton {
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.2s ease;
+
+    &:hover {
+      background-color: rgba(255, 69, 58, 0.2);
+      color: #ff453a;
+      transform: scale(1.1);
+    }
+  }
+
+
+  .infoGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+
+  .inputField{
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .prizeField {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-left: 23%;
+  }
+
+  .doneButton {
+    width: 20%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #218838;
+    }
+  }

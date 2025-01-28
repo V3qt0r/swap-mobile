@@ -16,7 +16,6 @@ const Register: React.FC = () => {
         dob: "",
         gender: "",
         location: "",
-        bvn: "",
         isAbove18: false,
     });
 
@@ -88,7 +87,7 @@ const Register: React.FC = () => {
 
                 <div className={styles.inputField}>
                     <label>Gender</label>
-                    <select name="gender" value={formData.gender} onChange={handleChange}>
+                    <select className={styles.selectField} name="gender" value={formData.gender} onChange={handleChange}>
                         <option value="">Select Gender:</option>
                         <option value="male">Male</option>
                         <option value="female">Female</option>
@@ -98,11 +97,6 @@ const Register: React.FC = () => {
                 <div className={styles.inputField}>
                     <label>Location:</label>
                     <input type="text" name="location" value={formData.location} onChange={handleChange} />
-                </div>
-
-                <div className={styles.inputField}>
-                    <label>BVN:</label>
-                    <input type="text" name="bvn" maxLength={11} minLength={11} value={formData.bvn} onChange={handleChange} />
                 </div>
 
                 <div className={styles.inputField}>

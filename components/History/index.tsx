@@ -1,4 +1,3 @@
-import { spawn } from "child_process";
 import React, {useEffect, useState} from "react";
 import styles from "./History.module.scss";
 import Navbar from "../Navbar"

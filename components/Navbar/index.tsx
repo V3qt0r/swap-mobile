@@ -11,7 +11,6 @@ const Navbar: React.FC = () => {
                     <li><a href="/my-products">My-Products</a></li>
                     <li><a href="/swapped-requests">Swap-Requests</a></li>
                     <li><a href= "/history">History</a></li>
-                    <li><a href="/settings">Settings</a></li>
                 </ul>
             </nav>
     )

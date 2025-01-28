@@ -1,6 +1,7 @@
 .pageContainer {
     background: linear-gradient(145deg, #ffffff 50%, #ffd700 50%);
     min-height: 100vh;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     animation: fadeIn 0.5s ease-in-out;
@@ -44,7 +45,7 @@
 
 .transactionGrid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
     // width: 100%;
     margin-top: 20px;
